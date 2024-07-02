@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Messenger</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+</head>
+<body>
+    <header>
+        <h1>AI Messenger</h1>
+    </header>
+
+    <main>
+        <section class="ai-tool">
+            <input type="text" id="ai-input" placeholder="Enter context..." />
+            <button id="generate-text">Generate Text</button>
+            <textarea id="generated-text" placeholder="Generated text will appear here..."></textarea>
+        </section>
+
+        <section class="message-sender">
+            <textarea id="typed-message" placeholder="Type your message here..."></textarea>
+            <button id="send-direct-message">Send Message</button>
+            <div id="send-options">
+                <button id="send-whatsapp">Send via WhatsApp</button>
+                <button id="send-sms">Send via SMS</button>
+                <button id="send-email">Send via Email</button>
+            </div>
+        </section>
+
+        <section class="contact-list">
+            <ul id="contact-list"></ul>
+            <button id="select-all">Select All</button>
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
